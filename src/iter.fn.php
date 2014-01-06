@@ -17,7 +17,7 @@ function deep_index($index) {
 
 function array_run($array, $keys) {
     $value = $array[ array_shift($keys) ];
-    if (count($keys)) return __FUNCTION__($value, $keys);
+    if (count($keys)) return array_run($value, $keys);
     return $value;
 }
 
