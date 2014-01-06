@@ -12,7 +12,7 @@ function deep_index($index) {
     return function($array) use ($index) {
         $keys = explode('.', $index);
         return array_run($array, $keys);
-    }
+    };
 }
 
 function array_run($array, $keys) {
