@@ -8,6 +8,19 @@ function index($index) {
     };
 }
 
+function deep_index($index) {
+    return function($array) use ($index) {
+        $keys = explode('.', $index);
+        return array_run($array, $keys);
+    }
+}
+
+function array_run($array, $keys) {
+    $value = $array[ array_shift($keys) ];
+    if (count($keys)) return __FUNCTION__($value, $keys);
+    return $value;
+}
+
 function property($propertyName) {
     return function($object) use ($propertyName) {
         return $object->$propertyName;
