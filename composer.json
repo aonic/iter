@@ -1,5 +1,5 @@
 {
-    "name": "nikic/iter",
+    "name": "aonic/iter",
     "description": "Iteration primitives using generators",
     "keywords": ["iterator", "generator", "functional"],
     "license": "BSD-3-Clause",
